@@ -37,9 +37,9 @@ parser_two.add_argument('-o','--outfile',action='store',default='results.csv',de
 parser_two.add_argument('-p','--pdb',action='store',required=True,dest='pdb',help="Enter the path to the pdb file, noting that the last thing should have the form of 'filename.pdb' (REQUIRED)")
 parser_two.add_argument('-c','--compiler',action='store',required=True,dest='oscompiler',help='Enter your operating system (i.e. Mac or Linux) (REQUIRED)')
 parser_two.add_argument('-l','--lig',action='store_true',dest='lig',help='Use this flag to indicate that a ligand is present within the pdb structure.')
-parser_two.add_argument('-h','--recordtype',action='store',default='H',dest='record_type',help='Enter the Atom ID of the ligand. If there are multiple, separate them by a space. Note: Must be specified if -l flag is used')
+parser_two.add_argument('-t','--recordtype',action='store',default='H',dest='record_type',help='Enter the Atom ID of the ligand. If there are multiple, separate them by a space. Note: Must be specified if -l flag is used')
 parser_two.add_argument('-r','--rosetta',action='store',dest='rpath',required=True,help='Enter the path to Rosetta. (REQUIRED)')
-parswer_two.add_argument('-a','--asite',action='store',dest='asite',help='Enter the path to the file containing the active site coordinates for the pdb structure in question. Note: This is required if the -l flag is not used.')
+parser_two.add_argument('-a','--asite',action='store',dest='asite',help='Enter the path to the file containing the active site coordinates for the pdb structure in question. Note: This is required if the -l flag is not used.')
 options = parser.parse_args()
 
 amino_acids = {'A':'ALA','R':'ARG','N':'ASN','D':'ASP','C':'CYS','Q':'GLN','E':'GLU','G':'GLY','H':'HIS','I':'ILE','L':'LEU','K':'LYS','M':'MET','F':'PHE','P':'PRO','S':'SER','T':'THR','W':'TRP','Y':'TYR','V':'VAL','U':'SEL','O':'PYL'}
