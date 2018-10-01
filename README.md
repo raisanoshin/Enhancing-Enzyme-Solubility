@@ -55,25 +55,33 @@ usage: Enhance Enzyme Solubility CalculateDistAndCN [-h] [-o OUTFILENAME] -p
                                                     [-a ASITE]
 
 optional arguments:
+
   -h, --help            show this help message and exit
+
   -o OUTFILENAME, --outfile OUTFILENAME
                         Specify the desired name for the output file
                         containing the distance to the active site and contact
                         number (Default: 'results.csv'):
+
   -p PDB, --pdb PDB     Enter the path to the pdb file, noting that the last
                         thing should have the form of 'filename.pdb'
                         (REQUIRED)
+
   -c OSCOMPILER, --compiler OSCOMPILER
                         Enter your operating system (i.e. Mac or Linux)
                         (REQUIRED)
+
   -l, --lig             Use this flag to indicate that a ligand is present
                         within the pdb structure.
+
   -t RECORD_TYPE, --recordtype RECORD_TYPE
                         Enter the Atom ID of the ligand. If there are
                         multiple, separate them by a space. Note: Must be
                         specified if -l flag is used
+
   -r RPATH, --rosetta RPATH
                         Enter the path to Rosetta. (REQUIRED)
+
   -a ASITE, --asite ASITE
                         Enter the path to the file containing the active site
                         coordinates for the pdb structure in question. Note:
@@ -107,30 +115,39 @@ usage: Enhance Enzyme Solubility GenerateMutations [-h] [-s PSSM_THRESHOLD]
                                                    [-p]
 
 optional arguments:
+
   -h, --help            show this help message and exit
+
   -s PSSM_THRESHOLD, --score_threshold PSSM_THRESHOLD
+
                         Indicate the threshold above which PSSM scores will be
                         favorable. Default: 0
+
   -d DIST_THRESHOLD, --distance_threshold DIST_THRESHOLD
                         Indicate the Calpha distance to the active site
                         threshold above which will enhance favorablility.
                         Default: 15.0
+
   -c CONTACT_THRESHOLD, --contact_threshold CONTACT_THRESHOLD
                         Indicate the contact number below which enhance
                         favoribility. Default: 16
+
   -o OUTFILENAME, --outfile OUTFILENAME
                         Specify the desired name for the project. Default:
                         'enzyme_0001'
+
   -m PSSM_FILENAME, --pssm PSSM_FILENAME
                         Provide the file name for the csv file containing the
                         PSSM scores formatted similar to the output of the
                         script written to calculate PSSM score by J. Klesmith.
+
   -n DIST_AND_CONTACT_FILENAME, --distance_and_contact DIST_AND_CONTACT_FILENAME
                         Provide the file name for the csv file containing the
                         distance to the active site and contact number for
                         each residue formatted into four columns with the
                         following information [Position, WT_Residue, Distance
                         to Active Stie, Contact Number]
+                        
   -p, --possibilities   Use this flag to indicate that you would like a file
                         generated with all possible mutations and their
                         respective information.
