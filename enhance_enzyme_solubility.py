@@ -220,7 +220,7 @@ def dist_contact_filters():
 	if len(info) > 4:
 		print "Generating CSV file with results..."
 		with open(options.outfilename, 'w') as newfile:
-			write = csv.wrtier(newfile,quoting=csv.QUOTE_ALL)
+			write = csv.writer(newfile,quoting=csv.QUOTE_ALL)
 			write.writerows(info)
 		print "File generated and placed in current directory! Name: "+"'"+options.outfilename+"'"
 	else:
