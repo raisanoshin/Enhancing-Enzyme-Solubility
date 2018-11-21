@@ -262,7 +262,7 @@ def verify_line(line):
 def contact_number(cleaned_pdb,rpath,oscompiler,backbone):
 	#calls the contact_num.xml script written to use the AverageDegree Filter from Rosetta to calculate the contact number
 	print "Calculating the contact number for each residue..."
-	sub_call = rpath+'main/source/bin/rosetta_scripts.'+oscompiler+'release -database '+rpath+'main/database/'+' -parser:protocol '+'../contact_num.xml -s '+cleaned_pdb+' -ignore_unrecognized_res -ex1 -ex2 -use_input_sc -no_his_his_pairE'+' -flip_HNQ -overwrite > contact_numbers.txt'
+	sub_call = rpath+'main/source/bin/rosetta_scripts.'+oscompiler+'release -database '+rpath+'main/database/'+' -parser:protocol '+'contact_num.xml -s '+cleaned_pdb+' -ignore_unrecognized_res -ex1 -ex2 -use_input_sc -no_his_his_pairE'+' -flip_HNQ -overwrite > contact_numbers.txt'
 	try:
 		status = os.system(sub_call)
 		subprocess.call(sub_call,shell=True)
