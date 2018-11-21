@@ -189,30 +189,17 @@ def dist_contact_filters():
 					position = [items[5]]
 					position.append(items[3])
 					position.extend(items[6:9])
-					backbone.append(position
+					backbone.append(position)
 
 	#Using the Average Degree Filter to calculate the Contact Number for each residue
 
-	print backbone
-	print 
-	print
-	print
-	print activesite
-	print
-	print
-	print
+
 	contact_nums = contact_number(cleaned_pdb,options.rpath, oscompiler, backbone)
-	
-	print contact_nums
-						
+			
 							
 	#Calculate the minimum distance to the active site for each residue
 
 	dist_asite = distance_to_active_site(backbone,activesite)
-							
-	print dist_asite
-	print
-	print
 
 	#Concatenate results to one list
 
@@ -226,8 +213,17 @@ def dist_contact_filters():
 			temp.append(res[0])
 			temp.append(res[1])
 			temp.append(res[2])
+			temp.append(current_contact_num)
 			info.append(temp)
-	print info
+		else:
+			match = False
+			print "Unable to display contact number for " + res[1] + " at position " + res[0]
+			temp.append(res[0])
+			temp.append(res[1])
+			temp.append(res[2])
+			info.append(temp)
+		residue += 1
+	
 	if match == False:
 		print "For missing contact numbers, refer to the file entitled 'contact_numbers.txt' generated in the current directory."
 
