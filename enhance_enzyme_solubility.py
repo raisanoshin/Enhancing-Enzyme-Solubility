@@ -175,7 +175,7 @@ def dist_contact_filters():
 		print f.output
 		return
 
-	cleaned_pdb = pdb[:len(pdb)-4]+'_'+chain+'.pdb'
+	cleaned_pdb = options.pdb[:len(pdb)-4]+'_'+chain+'.pdb'
 
 	#Extracting Calpha backbone coordinates from cleaned pdb
 
