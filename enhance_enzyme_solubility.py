@@ -215,6 +215,7 @@ def dist_contact_filters():
 			temp.append(res[2])
 			temp.append(current_contact_num)
 			info.append(temp)
+			residue += 1
 		else:
 			match = False
 			print "Unable to display contact number for " + res[1] + " at position " + res[0]
@@ -222,7 +223,6 @@ def dist_contact_filters():
 			temp.append(res[1])
 			temp.append(res[2])
 			info.append(temp)
-		residue += 1
 	
 	if match == False:
 		print "For missing contact numbers, refer to the file entitled 'contact_numbers.txt' generated in the current directory."
