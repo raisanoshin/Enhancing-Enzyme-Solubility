@@ -41,7 +41,7 @@ Minimum Files/Information Needed:
 
 	Whether or not there is a ligand present in the provided pdb (T/F)
 
-	The ligand ID (record type) OR a file with all the ligand information (x y z coordinates)
+	The ligand ID (record type) OR a file with all the x y z coordinates of the ligands (example format shown in 'asite_exformat.csv' located in the Examples folder)
 
 	The type of compiler (Mac or Linux)
 
@@ -113,7 +113,7 @@ Parser 2 - GenerateMutations
 
 Minimum Files/Information Needed:
 
-	The path to the file containing PSSM values (generated from pipeline created by GitHub user JKlesmith or formatted according to said pipeline output)
+	The path to the file containing PSSM values (generated from pipeline created by GitHub user JKlesmith or formatted according to said pipeline output (example format provided in 'pssm_exformat.csv' in the Examples folder))
 
 	The path to the file containing the distance to active site and contact number information (as formatted through the CalculateDistAndCN parser if created manually)
 
@@ -173,6 +173,7 @@ optional arguments:
                         respective information.
 
 
+
 Sample Command Lines: 
 
 python enhance_enzyme_solubility.py GenerateMutations -m 
@@ -182,3 +183,4 @@ python enhance_enzyme_solubility.py GenerateMutations -m
 	~/Desktop/2dfb/2dfb_PSSM.csv -n ~/Desktop/2dfb/2dfb_dist_cn.csv 
 	-s 1 -d 14.7 -c 12 -p -o 2dfb_favorable_mutations
 
+Files are also located in the Examples folder to use for a validation run.
