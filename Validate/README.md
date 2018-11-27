@@ -1,10 +1,12 @@
 # Example Run of the Enhancing Enzyme Solubility Python Script
 
-Generate minimum Calpha distance to active site and contact number-
+#####Generate minimum Calpha distance to active site and contact number-
 
 
 Input files:
+
 -3ich.pdb
+
 -3ich_activesite.csv
 
 
@@ -19,11 +21,13 @@ The output should match the given '3ich_dist_cn.csv' file.
 
 
 
-Generate Favorable Mutations-
+#####Generate Favorable Mutations-
 
 
 Input files:
+
 -3ich_PSSM.csv
+
 -3ich_dist_cn.csv (or a file you generated on your own in the same format)
 
 
