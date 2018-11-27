@@ -42,6 +42,7 @@ Minimum Files/Information Needed:
 	Whether or not there is a ligand present in the provided pdb (T/F)
 
 	The ligand ID (record type) OR a file with all the x y z coordinates of the ligands (example format shown in 'asite_exformat.csv' located in the Examples folder)
+                                  For creating your own active site file, if you have defined the specific residues that will be used for the active site, you may use the extract_activesite.py script to create a usable activesite csv file for this script. The input format for the extract_activesite.py script is shown in file '3ich_activesite.txt' in the Examples folder
 
 	The type of compiler (Mac or Linux)
 
