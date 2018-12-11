@@ -397,8 +397,8 @@ def enhance_enzyme_solubility():
 			row = row.rstrip()
 			if row == "None":
 				counter += 1
-			if counter == 0:
-				columns.append(column)
+		if counter == 0:
+			columns.append(column)
 
 	#Generating a list of just the PSSM scores of each residue 
 
@@ -428,14 +428,7 @@ def enhance_enzyme_solubility():
 		print "Distance and contact number data successfully extracted!"
 	columns = columns[1:]
 	#below makes sure the residues in the values list (contact numbers and distance to active site) match those in the columns list (from PSSM)
-	print columns
-	print
-	print
-	print
-	print "END COLUMNS"
-	print values
-	print 
-	print
+
 	for j in columns:
 		for i in range(len(values)):
 			for key, value in amino_acids.iteritems():
