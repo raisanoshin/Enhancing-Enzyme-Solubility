@@ -30,7 +30,7 @@ parser_one.add_argument('-c','--contact_threshold',action='store',default=16,des
 parser_one.add_argument('-o','--outfile',action='store',dest='outfilename',default='enzyme_0001',help="Specify the desired name for the project. Default: 'enzyme_0001'")
 parser_one.add_argument('-m','--pssm',action='store',required=True,dest='pssm_filename',help='Provide the file name for the csv file containing the PSSM scores formatted similar to the output of the script written to calculate PSSM score by J. Klesmith.')
 parser_one.add_argument('-n','--distance_and_contact',required=True,action='store',dest='dist_and_contact_filename',help='Provide the file name for the csv file containing the distance to the active site and contact number for each residue formatted into four columns with the following information [Position, WT_Residue, Distance to Active Stie, Contact Number]')
-parser_one.add_argument('-p','--possibilities',action='store_true',dest='possibilites',help='Use this flag to indicate that you would like a file generated with all possible mutations and their respective information.')
+
 
 parser_two = subparsers.add_parser('CalculateDistAndCN',help='Runs the script written to calculate the distance to the active site and the contact number of each residue in a protein.')
 parser_two.add_argument('-o','--outfile',action='store',default='results.csv',dest='outfilename',help="Specify the desired name for the output file containing the distance to the active site and contact number (Default: 'results.csv'): ")
