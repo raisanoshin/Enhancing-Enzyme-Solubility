@@ -453,22 +453,21 @@ def enhance_enzyme_solubility():
 
 	#Writing all possible mutations to a csv file
 
-	if options.possibilities:
-		if len(all_mutations) > 7:
-			print "Generating csv file with all possible mutations..."
-			filename = options.outfilename+"_all_mutations.csv"
-			with open(filename, 'w') as newfile:
-				write = csv.writer(newfile, quoting=csv.QUOTE_ALL)
-				write.writerows(all_mutations)
-			with open(filename) as thefile:
-				if sum(1 for line in thefile) <= 1:
-					print "Unable to write results to a csv file. Printing all possible mutations instead..."
-					print all_mutations
-				else:
-					print "File containing all possible mutations generated and placed in project folder! Name: "+filename
-		else:
-			print "Error in generating mutations. Please check that your files are formatted correctly and that the paths given for them are correct."
-			return
+	if len(all_mutations) > 7:
+		print "Generating csv file with all possible mutations..."
+		filename = options.outfilename+"_all_mutations.csv"
+		with open(filename, 'w') as newfile:
+			write = csv.writer(newfile, quoting=csv.QUOTE_ALL)
+			write.writerows(all_mutations)
+		with open(filename) as thefile:
+			if sum(1 for line in thefile) <= 1:
+				print "Unable to write results to a csv file. Printing all possible mutations instead..."
+				print all_mutations
+			else:
+				print "File containing all possible mutations generated and placed in project folder! Name: "+filename
+	else:
+		print "Error in generating mutations. Please check that your files are formatted correctly and that the paths given for them are correct."
+		return
 
 	#Writing favorable mutations to a csv file
 
