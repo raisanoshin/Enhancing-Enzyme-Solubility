@@ -427,21 +427,6 @@ def enhance_enzyme_solubility():
 	else:
 		print "Distance and contact number data successfully extracted!"
 	columns = columns[1:]
-	#below makes sure the residues in the values list (contact numbers and distance to active site) match those in the columns list (from PSSM)
-
-	for j in columns:
-		for i in range(len(values)):
-			for key, value in amino_acids.iteritems():
-				if values[i][1] == value:
-					WT = key
-				if (int(values[i][0]) == int(j[0])) & (WT != j[1]):
-					values.insert(i,[j[0],amino_acids[j[1]],0,50,"Note: Residue deleted from model"])
-					for n in range(i+1,len(values)):
-						p = int(values[n][0])
-						values[n][0] = p + 1
-						values[n][0] = str(values[n][0])
-				else:
-					continue	
 
 	#Filtering favorable mutations
 
