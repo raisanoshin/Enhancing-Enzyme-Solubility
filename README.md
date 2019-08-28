@@ -3,7 +3,7 @@
 This is the readme file explaining how to use the script entitled "enhance_enzyme_solubility.py." It is designed to be used with singular inputs rather than in batches, and it is designed with the assumption that the user possesses basic command line knowledge.
 
 Package Contents: 
-enhance_enzyme_solubility.py - Can be used to (1) calculate the distance to active site and contact number and (2) to generate favorable mutations based upon PSSM score (generated from script written by GitHub user JKlesmith) and distance to active site and contact number file
+enhance_enzyme_solubility.py - Can be used to (1) calculate the minimum distance to active site and contact number and (2) to generate favorable mutations based upon PSSM score (generated from script written by GitHub user JKlesmith) and distance to active site and contact number file
 
 contact_num.xml - Used in Parser 1 (defined below) to calculate the contact number of each residue by using the AverageDegree filter in Rosetta
 
