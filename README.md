@@ -3,6 +3,7 @@
 This is the readme file explaining how to use the script entitled "enhance_enzyme_solubility.py." It is designed to be used with singular inputs rather than in batches, and it is designed with the assumption that the user possesses basic command line knowledge.
 
 Package Contents: 
+
 enhance_enzyme_solubility.py - Can be used to (1) calculate the minimum distance to active site and contact number and (2) to generate favorable mutations based upon PSSM score (generated from script written by GitHub user JKlesmith) and distance to active site and contact number file
 
 #### Distance to active site: Defined as the minimum Calpha distance of a specified residue to the active site. All active site coordinates provided are used to evaluate the minimum. In optimal conditions, this value is high (>15). 
