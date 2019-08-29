@@ -6,6 +6,10 @@ Package Contents:
 
 enhance_enzyme_solubility.py - Can be used to (1) calculate the minimum distance to active site and contact number and (2) to generate favorable mutations based upon PSSM score (generated from script written by GitHub user JKlesmith) and distance to active site and contact number file
 
+contact_num.xml - Used in Parser 1 (defined below) to calculate the contact number of each residue by using the AverageDegree filter in Rosetta
+
+Terminology Definitions:
+
 #### Distance to active site: Defined as the minimum Calpha distance of a specified residue to the active site. All active site coordinates provided are used to evaluate the minimum. In optimal conditions, this value is high (>15). 
 
 #### Contact Number: Defined as the number of adjacent residues to a specified residue. In optimal conditions, this value is low (<16)
@@ -13,9 +17,6 @@ enhance_enzyme_solubility.py - Can be used to (1) calculate the minimum distance
 #### PSSM: Defined as the evolutionary conservation of a specifed residue. This script runs with the assumption that the format of the file is in accordance with J. Klesmith's PSSM-calculating script (GitHub username: Jklesmith). In optimal conditions, this value is high (>0)
 
 (Above filters obtained from http://www.pnas.org/content/114/9/2265)
-
-contact_num.xml - Used in Parser 1 (defined below) to calculate the contact number of each residue by using the AverageDegree filter in Rosetta
-
 
 
 Overall Script Help: 
